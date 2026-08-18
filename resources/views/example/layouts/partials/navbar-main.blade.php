@@ -1,4 +1,4 @@
-<nav class="fixed z-50 w-full bg-white border-b border-gray-200 sm:py-2 dark:bg-gray-800 dark:border-gray-700">
+﻿<nav class="fixed z-50 w-full bg-white border-b border-gray-200 sm:py-2 dark:bg-black dark:border-gray-800">
   <div class="container py-3 mx-auto">
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start">
@@ -67,24 +67,24 @@
     <ul class="pt-2">
       <li>
         <a href="#"
-          class="block py-2 pl-3 pr-4 text-base font-normal text-gray-900 bg-gray-100 dark:bg-gray-700 dark:text-white">Dashboard</a>
+          class="block py-2 pl-3 pr-4 text-base font-normal text-gray-900 bg-gray-100 dark:bg-black dark:text-white">Dashboard</a>
       </li>
       <li>
         <a href="#"
-          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Team</a>
+          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-800 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Team</a>
       </li>
       <li>
         <a href="#"
-          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Projects</a>
+          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-800 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Projects</a>
       </li>
       <li>
         <a href="#"
-          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Calendar
+          class="block px-3 py-2 text-base font-normal text-gray-600 border-b border-gray-100 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-800 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">Calendar
         </a>
       </li>
       <li class="block">
         <a href="#"
-          class="inline-flex items-center w-full px-3 py-2 text-base font-normal text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">
+          class="inline-flex items-center w-full px-3 py-2 text-base font-normal text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 dark:border-gray-800 dark:hover:bg-gray-700 dark:text-gray-400 dark:hover:text-white">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -96,3 +96,5 @@
     </ul>
   </div>
 </nav>
+
+

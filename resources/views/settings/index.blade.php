@@ -1,9 +1,9 @@
-@extends('layouts.stockify')
+﻿@extends('layouts.stockify')
 
 @section('content')
 
 <div class="mb-6">
-    <h1 class="text-3xl font-bold">Pengaturan</h1>
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Pengaturan</h1>
     <p class="mt-1 text-slate-500">
         Pengaturan umum aplikasi Stockify.
     </p>

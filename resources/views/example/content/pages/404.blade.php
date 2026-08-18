@@ -1,6 +1,6 @@
-@extends('example.layouts.default.main')
+﻿@extends('example.layouts.default.main')
 @section('content')
-<div class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900 mt-5">
+<div class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-blue-950 mt-5">
     <div class="block md:max-w-lg">
         <img src="{{ asset('static/images/illustrations/404.svg') }}" alt="astronaut image">
     </div>
@@ -14,3 +14,5 @@
     </div>
 </div>
 @endsection
+
+

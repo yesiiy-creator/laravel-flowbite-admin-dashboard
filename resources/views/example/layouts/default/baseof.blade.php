@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="dark">
   <head>
     @include('example.layouts.partials.header')
@@ -7,9 +7,12 @@
     $whiteBg = isset($params['white_bg']) && $params['white_bg'];
   @endphp
 
-<body class="{{ $whiteBg ? 'bg-white dark:bg-gray-900' : 'bg-gray-50 dark:bg-gray-800' }}">
+<body class="{{ $whiteBg ? 'bg-white dark:bg-blue-950' : 'bg-gray-50 dark:bg-black' }}">
 
   @yield('main')
   @include('example.layouts.partials.scripts')
 </body>
 </html>
+
+
+

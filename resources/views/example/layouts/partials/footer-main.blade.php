@@ -1,4 +1,4 @@
-<footer class="py-12 bg-white xl:py-24 dark:bg-gray-800">
+﻿<footer class="py-12 bg-white xl:py-24 dark:bg-black">
     <div class="container px-4 mx-auto xl:px-0">
         <div class="grid gap-12 xl:grid-cols-6 xl:gap-24">
             <div class="col-span-2">
@@ -72,8 +72,10 @@
                 </ul>
             </div>
         </div>
-        <hr class="my-8 border-gray-200 lg:my-12 dark:border-gray-700">
+        <hr class="my-8 border-gray-200 lg:my-12 dark:border-gray-800">
         <span class="block text-center text-gray-600 dark:text-gray-400">© 2019-<span id="currentYear">2023</span> <a href="https://flowbite.com" target="_blank" rel="noreferrer">Flowbite</a>. All Rights Reserved.
         </span>
     </div>
 </footer>
+
+

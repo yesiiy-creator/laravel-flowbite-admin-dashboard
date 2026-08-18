@@ -1,8 +1,8 @@
-@extends('layouts.stockify')
+﻿@extends('layouts.stockify')
 
 @section('content')
-<h1 class="text-3xl font-bold">Dashboard Stockify</h1>
-<p class="mt-1 text-slate-500">Ringkasan stok dan aktivitas gudang.</p>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Dashboard Stockify</h1>
+<p class="mt-1 text-slate-500 dark:text-gray-400">Ringkasan stok dan aktivitas gudang.</p>
 
 <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
     @foreach([['Produk',$totalProducts,'blue'],['Stok Menipis',$lowStock,'rose'],['Masuk Hari Ini',$incomingToday,'emerald'],['Keluar Hari Ini',$outgoingToday,'amber']] as [$a,$b,$c])

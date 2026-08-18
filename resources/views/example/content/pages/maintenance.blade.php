@@ -1,6 +1,6 @@
-@extends('example.layouts.default.main')
+﻿@extends('example.layouts.default.main')
 @section('content')
-<div class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900">
+<div class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-blue-950">
     <div class="block mb-5 md:max-w-md">
         <img src="{{ asset('static/images/illustrations/maintenance.svg') }}" alt="maintenance image">
     </div>
@@ -14,3 +14,5 @@
     </div>
 </div>
 @endsection
+
+
