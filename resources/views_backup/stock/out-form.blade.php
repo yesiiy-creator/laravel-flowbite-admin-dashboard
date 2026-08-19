@@ -1,0 +1,2 @@
+﻿@extends('layouts.stockify') @section('content')<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Barang Keluar</h1><form method="POST" action="{{route('stock.out.store')}}" class="mt-6 max-w-xl rounded-xl bg-white p-6 shadow">@csrf @include('stock.partials.form',['suppliers'=>collect(),'isOut'=>true,'isOpname'=>false])</form>@endsection
+

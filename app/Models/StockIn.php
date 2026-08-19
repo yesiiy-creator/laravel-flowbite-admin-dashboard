@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class StockIn extends Model
 {
     use HasFactory;
-    protected $fillable = ['product_id','supplier_id','user_id','quantity','date','note'];
+    protected $fillable = ['product_id','supplier_id','user_id','quantity','date','note','status'];
     protected $casts = ['date' => 'date'];
     public function product(): BelongsTo { return $this->belongsTo(Product::class); }
     public function supplier(): BelongsTo { return $this->belongsTo(Supplier::class); }
