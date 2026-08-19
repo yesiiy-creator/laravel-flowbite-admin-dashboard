@@ -1,4 +1,0 @@
-<?php
-namespace App\Http\Controllers;
-use App\Services\SupplierService; use Illuminate\Http\Request;
-class SupplierController extends Controller { public function __construct(private SupplierService $suppliers){} public function index(){return view('suppliers.index',['suppliers'=>$this->suppliers->getAllSuppliers()]);} public function store(Request $r){$this->suppliers->createSupplier($this->data($r));return back()->with('success','Supplier ditambahkan.');} public function update(Request $r,int $supplier){$this->suppliers->updateSupplier($supplier,$this->data($r));return back()->with('success','Supplier diperbarui.');} public function destroy(int $supplier){$this->suppliers->deleteSupplier($supplier);return back()->with('success','Supplier dihapus.');} private function data(Request $r):array{return $r->validate(['name'=>'required|max:255','phone'=>'nullable|max:20','email'=>'nullable|email|max:255','address'=>'nullable']);} }

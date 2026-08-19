@@ -1,1 +1,0 @@
-@include('products.form', ['product' => new \App\Models\Product()])
