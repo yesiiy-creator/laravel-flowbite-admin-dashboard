@@ -1,2 +1,55 @@
-@extends('layouts.stockify') @section('content')<div class="flex justify-between"><div><h1 class="text-3xl font-bold text-gray-900 dark:text-white">Produk</h1><p class="text-slate-500">Kelola data produk dan stok minimum.</p></div>@if(auth()->user()->isRole('admin','manajer_gudang'))<div class="flex gap-2"><a href="{{route('products.create')}}" class="rounded bg-emerald-600 px-4 py-2 text-white">+ Produk</a><a href="{{route('products.export')}}" class="rounded bg-blue-600 px-4 py-2 text-white">Export CSV</a><a href="{{route('products.import.form')}}" class="rounded bg-amber-600 px-4 py-2 text-white">Import CSV</a></div>@endif</div><div class="mt-6 overflow-hidden rounded-xl bg-white shadow"><table class="w-full text-sm"><thead class="bg-slate-100"><tr><th class="p-4 text-left">SKU</th><th class="p-4 text-left">Produk</th><th class="p-4 text-left">Kategori</th><th class="p-4 text-left">Stok</th><th></th></tr></thead><tbody>@forelse($products as $p)<tr class="border-t"><td class="p-4">{{$p->sku}}</td><td class="p-4 font-medium">{{$p->name}}</td><td class="p-4">{{$p->category->name}}</td><td class="p-4 {{$p->stock<=$p->min_stock?'text-rose-600 font-bold':''}}">{{$p->stock}} / min {{$p->min_stock}}</td><td class="p-4"><a class="text-emerald-700" href="{{route('products.show',$p->id)}}">Detail</a></td></tr>@empty<tr><td colspan="5" class="p-8 text-center">Belum ada produk.</td></tr>@endforelse</tbody></table></div><div class="mt-3">{{$products->links()}}</div>@endsection
-
+﻿@extends('layouts.stockify')
+@section('content')
+<div class="flex justify-between">
+    <div>
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Produk</h1>
+        <p class="text-slate-500">Kelola data produk dan stok minimum.</p>
+    </div>
+    @if(auth()->user()->isRole('admin','manajer_gudang'))
+    <div class="flex gap-2">
+        <a href="{{route('products.create')}}" class="rounded bg-emerald-600 px-4 py-2 text-white">+ Produk</a>
+        <a href="{{route('products.export')}}" class="rounded bg-blue-600 px-4 py-2 text-white">Export CSV</a>
+        <a href="{{route('products.import.form')}}" class="rounded bg-amber-600 px-4 py-2 text-white">Import CSV</a>
+    </div>
+    @endif
+</div>
+<div class="mt-6 overflow-hidden rounded-xl bg-white shadow">
+    <table class="w-full text-sm">
+        <thead class="bg-slate-100">
+            <tr>
+                <th class="p-4 text-left">SKU</th>
+                <th class="p-4 text-left">Produk</th>
+                <th class="p-4 text-left">Kategori</th>
+                <th class="p-4 text-left">Stok</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse($products as $p)
+            <tr class="border-t">
+                <td class="p-4">{{$p->sku}}</td>
+                <td class="p-4 font-medium">{{$p->name}}</td>
+                <td class="p-4">{{$p->category->name}}</td>
+                <td class="p-4 {{$p->stock<=$p->min_stock?'text-rose-600 font-bold':''}}">{{$p->stock}} / min {{$p->min_stock}}</td>
+                <td class="p-4">
+                    <div class="flex gap-3">
+                        <a class="text-emerald-700" href="{{route('products.show',$p->id)}}">Detail</a>
+                        @if(auth()->user()->isRole('admin','manajer_gudang'))
+                        <a class="text-blue-600" href="{{route('products.edit',$p->id)}}">Edit</a>
+                        <form method="POST" action="{{route('products.destroy',$p->id)}}" onsubmit="return confirm('Yakin hapus produk ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-600">Hapus</button>
+                        </form>
+                        @endif
+                    </div>
+                </td>
+            </tr>
+            @empty
+            <tr><td colspan="5" class="p-8 text-center">Belum ada produk.</td></tr>
+            @endforelse
+        </tbody>
+    </table>
+</div>
+<div class="mt-3">{{$products->links()}}</div>
+@endsection
